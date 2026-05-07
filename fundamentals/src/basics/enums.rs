@@ -39,6 +39,11 @@ fn q1() {
         dev: String::from("The package 02os2skgfpl, was delivered"),
     };
 
+    match _m1 {
+        Message::Default(m) => println!("_m1: {}", m),
+        Message::System { customer, dev } => println!("customer: {}, dev: {}", customer, dev),
+    }
+
     // 16. The Option<T> is the type that'll say that a variable of type T can possibly be there or not. Result<T, E> is the result of a function that'll return either the type T or an error E
 
     let vec = vec![1, 2, 3, 40];
@@ -47,13 +52,16 @@ fn q1() {
     }
 
     let dbing = DBing(90, 14);
-    let s_db = DB {
+    let s_db = SDB {
         server: String::from("MySQL"),
     };
 
-    let c = Complex::DB(s_db);
+    let _c = Complex::DB(s_db);
 
     println!("dbing 0, 1: {} {}", dbing.0, dbing.1);
+    match _c {
+        Complex::DB(e) => println!("{}", e.server),
+    }
 
     match get_last() {
         Ok(l) => println!("Last is {l}"),
@@ -99,12 +107,12 @@ fn get_last() -> Result<i32, String> {
     }
 }
 
-struct DB {
+struct SDB {
     server: String,
 }
 
 struct DBing(i32, i32);
 
 enum Complex {
-    DB(DB),
+    DB(SDB),
 }
