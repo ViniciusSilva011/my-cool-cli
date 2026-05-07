@@ -73,6 +73,10 @@ fn borrowing_rules() {
 #[test]
 fn borrowing_rules2() {
     let mut v = vec![1, 2, 3];
+    let mut v2 = Vec::new();
+    v2.push(1);
+    v2.push(2);
+    v2.push(3);
 
     let f = &v[0];
 

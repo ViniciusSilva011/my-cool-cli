@@ -1,35 +1,35 @@
-# Ownership, borrowing, and moves
+# [x] Ownership, borrowing, and moves
 
-# Mutability
+# [x] Mutability
 
-# Structs and enums
+# [ ] Structs and enums
 
-# Pattern matching
+# [ ] Pattern matching
 
-# Option and Result
+# [ ] Option and Result
 
-# Traits
+# [ ] Traits
 
-# impl blocks and methods
+# [ ] impl blocks and methods
 
-# Lifetimes, but not too early
+# [ ] Lifetimes, but not too early
 
-# Collections
+# [ ] Collections
 
-# Iterators
+# [ ] Iterators
 
-# Modules, crates, and Cargo
+# [ ] Modules, crates, and Cargo
 
-# Error handling
+# [ ] Error handling
 
-# Testing
+# [ ] Testing
 
-# Derive macros
+# [ ] Derive macros
 
-# Smart pointers
+# [ ] Smart pointers
 
-# Async Rust
+# [ ] Async Rust
 
-# Serialization and deserialization
+# [ ] Serialization and deserialization
 
-# The standard library docs
+# [ ] The standard library docs
