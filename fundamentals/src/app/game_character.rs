@@ -60,9 +60,9 @@ impl GameCharacter {
         match self.class {
             Class::Warrior => "⚔️  Warrior",
             Class::Paladin => "☀️  Paladin",
-            Class::Healer => "💚  Healer",
-            Class::Goblin => "👺  Goblin",
-            Class::Archer => "🎯  Archer",
+            Class::Healer => "💚 Healer",
+            Class::Goblin => "👺 Goblin",
+            Class::Archer => "🎯 Archer",
             Class::Elf => "🍃 Elf",
         }
     }
