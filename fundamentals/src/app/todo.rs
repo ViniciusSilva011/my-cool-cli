@@ -1,40 +1,3 @@
-struct TodoItem {
-    message: String,
-    status: Status,
-}
-
-impl TodoItem {
-    fn build_status(&self) -> &str {
-        match self.status {
-            Status::Working => "🛫 Working",
-            Status::Completed => "✅ Completed",
-        }
-    }
-}
-
-struct TodoList {
-    list: Vec<TodoItem>,
-}
-
-impl TodoList {
-    fn add(&mut self, item: TodoItem) {
-        self.list.push(item);
-    }
-
-    fn print(self) {
-        for i in 0..self.list.len() {
-            println!("=================== TODO {} ===================", i + 1);
-            println!("Message: {}", self.list[i].message);
-            println!("Status: {}", self.list[i].build_status());
-        }
-    }
-}
-
-enum Status {
-    Working,
-    Completed,
-}
-
 #[test]
 fn todo() {
     let mut list = TodoList { list: Vec::new() };
@@ -53,4 +16,47 @@ fn todo() {
     list.add(item2);
 
     list.print();
+
+    list.list[0].change(Status::Completed);
+}
+
+struct TodoItem {
+    message: String,
+    status: Status,
+}
+
+impl TodoItem {
+    fn build_status(&self) -> &str {
+        match self.status {
+            Status::Working => "🛫 Working",
+            Status::Completed => "✅ Completed",
+        }
+    }
+
+    fn change(&mut self, status: Status) {
+        self.status = status;
+    }
+}
+
+struct TodoList {
+    list: Vec<TodoItem>,
+}
+
+impl TodoList {
+    fn add(&mut self, item: TodoItem) {
+        self.list.push(item);
+    }
+
+    fn print(&self) {
+        for i in 0..self.list.len() {
+            println!("=================== TODO {} ===================", i + 1);
+            println!("Message: {}", self.list[i].message);
+            println!("Status: {}", self.list[i].build_status());
+        }
+    }
+}
+
+enum Status {
+    Working,
+    Completed,
 }
