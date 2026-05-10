@@ -2,7 +2,7 @@
 
 # [x] Mutability
 
-# [ ] Structs and enums
+# [x] Structs and enums
 
 # [ ] Pattern matching
 
