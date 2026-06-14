@@ -1,4 +1,4 @@
-# Tools:
+# PLAN OF STUDY FOR THE FUTURE
 
 ## Basics (POC)
 
